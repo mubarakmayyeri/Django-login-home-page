@@ -1,1 +1,1 @@
-# Shopping website created using *Django*
+# Shopping website created using **Django** framework.
