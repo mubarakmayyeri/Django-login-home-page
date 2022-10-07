@@ -1,0 +1,28 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+
+<div class='container'>
+<h2 class='text-center'>Products</h2>
+  <div class='container d-flex'>
+
+    {% for product in products  %}
+
+    <div class="card p-2 m-2" style="width: 18rem;">
+      <img src={{product.image}} class="card-img-top" style='height: 10rem' alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> {{product.name}} </h5>
+        <p class="card-text">Price - Rs. {{product.price}}</p>
+        <p class="card-text">in stock - {{product.stock}} items</p>
+        <a href="#" class="btn btn-primary">Add to Cart</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </div>
+  
+</div>
+
+{% endblock content %}
+
