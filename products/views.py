@@ -14,3 +14,6 @@ def about(request):
 
 def contact(request):
   return HttpResponse('<h1>Contact Page<h1>')
+
+def cart(request):
+  return HttpResponse('<h1>Cart</h1>')
