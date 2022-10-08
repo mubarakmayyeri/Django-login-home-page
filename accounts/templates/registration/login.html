@@ -1,0 +1,20 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+
+<div class='container'>
+  <h2 class='h2 text-center mt-5 mb-5'>Shoppy</h2>
+  <div class='container-fluid d-flex justify-content-center'>
+    <form class='' method='post'>
+      {% csrf_token %}
+      {{form.as_p}}
+      <div class='d-flex justify-content-center'>
+        <button class='btn btn-primary'>Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}
+
+
