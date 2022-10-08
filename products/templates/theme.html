@@ -30,11 +30,28 @@
             <li class="nav-item">
               <a class="nav-link" href="/products/contact">Contact</a>
             </li>
+
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href= '{% url 'loggedOut' %}' >
+                <button class='btn btn-secondary'>Logout</button>
+              </a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href= '{% url 'userLogin' %}' >
+                <button class='btn btn-secondary'>Login</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href= '{% url 'userRegister' %}' >
+                <button class='btn btn-secondary'>Register</button>
+              </a>
+            </li>
+            {% endif %}
+
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success text-light border-light" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
