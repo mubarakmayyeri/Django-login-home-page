@@ -3,6 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
+def home(request):
+  return render(request, 'home.html')
+
 def userRegister(request):
   if request.method == 'POST':
     form = UserCreationForm(request.POST)

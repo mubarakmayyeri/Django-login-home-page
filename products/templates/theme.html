@@ -39,21 +39,21 @@
             {% if user.is_authenticated %}
 
             <li class="nav-item">
-              <a class="nav-link" href='{% url 'userLogout' %}'>
+              <a class="nav-link" href='{% url "userLogout" %}'>
                 <button class='btn btn-sm btn-secondary'>Logout</button>
               </a>
             </li>
             {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href='{% url 'userLogin' %}'>
+            {% comment %} <li class="nav-item">
+              <a class="nav-link" href='{% url "userLogin" %}'>
                 <button class='btn btn-sm btn-secondary'>Login</button>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href='{% url 'userRegister' %}'>
+              <a class="nav-link" href='{% url "userRegister" %}'>
                 <button class='btn btn-sm btn-secondary'>Register</button>
               </a>
-            </li>
+            </li> {% endcomment %}
 
             {% endif %}
 
